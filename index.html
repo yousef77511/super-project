@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Supercars 2025 | The Future of Automotive Excellence</title>
+    <meta name="description" content="Experience the pinnacle of 2025 supercar engineering and design">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        electric: '#00f0ff',
+                        nebula: '#6e00ff',
+                        carbon: '#1a1a1a'
+                    },
+                    fontFamily: {
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        rajdhani: ['Rajdhani', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+        @media (max-width: 768px) {
+            .parallax {
+                background-attachment: scroll;
+            }
+        }
+        .flip-card-inner {
+            transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            backface-visibility: hidden;
+        }
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.7);
+        }
+        .glow-box {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+        }
+        .car-stat {
+            transition: all 0.3s ease;
+        }
+        .car-stat:hover {
+            transform: translateY(-5px);
+            text-shadow: 0 5px 15px rgba(0, 240, 255, 0.5);
+        }
+        .holographic {
+            background: linear-gradient(135deg, rgba(0,240,255,0.1) 0%, rgba(110,0,255,0.1) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-carbon text-gray-100 font-rajdhani">
+    <!-- Augmented Reality Navigation -->
+    <nav class="bg-carbon/90 text-electric sticky top-0 z-50 shadow-lg border-b border-electric/20 backdrop-blur-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-rocket text-2xl"></i>
+                <span class="text-xl font-bold font-orbitron">ELITE<span class="text-white">2025</span></span>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none text-electric">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#showroom" class="nav-link hover:text-white transition font-orbitron">SHOWROOM</a>
+                <a href="#technology" class="nav-link hover:text-white transition font-orbitron">TECHNOLOGY</a>
+                <a href="#performance" class="nav-link hover:text-white transition font-orbitron">PERFORMANCE</a>
+                <a href="#configurator" class="nav-link hover:text-white transition font-orbitron">CONFIGURATOR</a>
+                <a href="#experience" class="nav-link hover:text-white transition font-orbitron">EXPERIENCE</a>
+            </div>
+            
+            <div class="hidden md:block">
+                <button onclick="openContactModal()" class="bg-electric/10 border border-electric/50 hover:bg-electric/20 text-electric px-4 py-2 rounded-full transition font-orbitron text-sm">
+                    <i class="fas fa-headset mr-2"></i>CONTACT
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-carbon/95 px-4 py-3 border-t border-electric/20">
+            <a href="#showroom" class="block py-3 hover:text-white border-b border-electric/10 font-orbitron">SHOWROOM</a>
+            <a href="#technology" class="block py-3 hover:text-white border-b border-electric/10 font-orbitron">TECHNOLOGY</a>
+            <a href="#performance" class="block py-3 hover:text-white border-b border-electric/10 font-orbitron">PERFORMANCE</a>
+            <a href="#configurator" class="block py-3 hover:text-white border-b border-electric/10 font-orbitron">CONFIGURATOR</a>
+            <a href="#experience" class="block py-3 hover:text-white font-orbitron">EXPERIENCE</a>
+        </div>
+    </nav>
+
+    <!-- Holographic Hero Showcase -->
+    <section id="showroom" class="parallax bg-[url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-carbon/90 to-carbon/50"></div>
+        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-carbon to-transparent z-10"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 font-orbitron glow-text">
+                    <span class="block">2025</span>
+                    <span class="text-electric">HYPER</span>EVOLUTION
+                </h1>
+                <p class="text-xl mb-8 text-gray-300">Experience the pinnacle of automotive engineering with our limited edition 2025 supercar collection featuring revolutionary hybrid-electric powertrains and aerospace-inspired design.</p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#configurator" class="bg-electric hover:bg-electric/80 text-carbon font-bold py-3 px-6 rounded-full transition transform hover:scale-105 font-orbitron">
+                        BUILD YOURS <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <button onclick="playVideo()" class="bg-transparent border-2 border-electric hover:bg-electric/10 text-electric font-bold py-3 px-6 rounded-full transition font-orbitron">
+                        <i class="fas fa-play mr-2"></i>LAUNCH FILM
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- AR Indicator -->
+        <div class="absolute bottom-8 right-8 flex items-center text-electric/80 text-sm font-orbitron">
+            <i class="fas fa-mobile-alt mr-2"></i>
+            <span>AR VIEW AVAILABLE</span>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center hidden">
+        <div class="relative w-full max-w-4xl mx-4">
+            <button onclick="closeVideo()" class="absolute -top-12 right-0 text-white text-2xl hover:text-electric">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe id="video-iframe" class="w-full h-[500px]" src="https://www.youtube.com/embed/7X8II6J-6mU?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quantum Performance Stats -->
+    <section id="performance" class="py-20 bg-gradient-to-b from-carbon to-carbon/90">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-electric font-orbitron tracking-widest">QUANTUM PERFORMANCE</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 font-orbitron">2025 SPECIFICATIONS</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Engineered beyond conventional limits with cutting-edge 2025 technology</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="car-stat bg-carbon border border-electric/20 rounded-xl p-6 text-center glow-box hover:border-electric/50">
+                    <div class="text-electric text-3xl mb-3">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1 font-orbitron">1,850 HP</h3>
+                    <p class="text-gray-400 text-sm">HYBRID POWERTRAIN</p>
+                </div>
+                <div class="car-stat bg-carbon border border-electric/20 rounded-xl p-6 text-center glow-box hover:border-electric/50">
+                    <div class="text-electric text-3xl mb-3">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1 font-orbitron">0-300 km/h</h3>
+                    <p class="text-gray-400 text-sm">IN 8.5 SECONDS</p>
+                </div>
+                <div class="car-stat bg-carbon border border-electric/20 rounded-xl p-6 text-center glow-box hover:border-electric/50">
+                    <div class="text-electric text-3xl mb-3">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1 font-orbitron">TOP SPEED</h3>
+                    <p class="text-gray-400 text-sm">450 KM/H</p>
+                </div>
+                <div class="car-stat bg-carbon border border-electric/20 rounded-xl p-6 text-center glow-box hover:border-electric/50">
+                    <div class="text-electric text-3xl mb-3">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1 font-orbitron">CARBON NEUTRAL</h3>
+                    <p class="text-gray-400 text-sm">E-FUEL COMPATIBLE</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Holographic Model Showcase -->
+    <section id="technology" class="py-20 bg-carbon/90">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-electric font-orbitron tracking-widest">2025 COLLECTION</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 font-orbitron">LIMITED EDITION MODELS</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Only 25 units of each model will be produced worldwide</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Model 1 -->
+                <div class="flip-card cursor-pointer h-full">
+                    <div class="flip-card-inner h-full">
+                        <div class="flip-card-front h-full">
+                            <div class="holographic rounded-xl overflow-hidden h-full flex flex-col">
+                                <div class="relative">
+                                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Nebula XSR" class="w-full h-64 object-cover">
+                                    <div class="absolute top-4 right-4 bg-electric/20 backdrop-blur-sm text-electric px-3 py-1 rounded-full text-sm font-bold font-orbitron">
+                                        LIMITED EDITION
+                                    </div>
+                                </div>
+                                <div class="p-6 flex-grow">
+                                    <h3 class="text-2xl font-bold mb-2 font-orbitron">NEBULA XSR</h3>
+                                    <p class="text-gray-300 mb-4">The ultimate track weapon with active aerodynamics and AI-assisted driving</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="font-bold text-electric">€4,200,000</span>
+                                        <span class="text-gray-400 text-sm">25/25 REMAINING</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back bg-gradient-to-br from-electric/10 to-nebula/10 text-white rounded-xl p-6 shadow-lg h-full flex flex-col justify-center border border-electric/30">
+                            <h3 class="text-xl font-bold mb-4 font-orbitron">TECH SPECS</h3>
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex justify-between">
+                                    <span>Powertrain:</span>
+                                    <span class="text-electric">V12 Hybrid (1,850HP)</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>0-300km/h:</span>
+                                    <span class="text-electric">8.5s</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Top Speed:</span>
+                                    <span class="text-electric">450km/h</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Weight:</span>
+                                    <span class="text-electric">1,395kg</span>
+                                </li>
+                            </ul>
+                            <button onclick="configureCar('Nebula XSR')" class="mt-6 bg-electric hover:bg-electric/80 text-carbon font-bold py-2 px-4 rounded-full transition font-orbitron text-sm">
+                                CONFIGURE <i class="fas fa-cog ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model 2 -->
+                <div class="flip-card cursor-pointer h-full">
+                    <div class="flip-card-inner h-full">
+                        <div class="flip-card-front h-full">
+                            <div class="holographic rounded-xl overflow-hidden h-full flex flex-col">
+                                <div class="relative">
+                                    <img src="https://i.pinimg.com/736x/f6/f9/a8/f6f9a8911554a7f1ece037e861cf1537.jpg" alt="Quantum GT" class="w-full h-64 object-cover">
+                                    <div class="absolute top-4 right-4 bg-electric/20 backdrop-blur-sm text-electric px-3 py-1 rounded-full text-sm font-bold font-orbitron">
+                                        SOLD OUT
+                                    </div>
+                                </div>
+                                <div class="p-6 flex-grow">
+                                    <h3 class="text-2xl font-bold mb-2 font-orbitron">QUANTUM GT</h3>
+                                    <p class="text-gray-300 mb-4">The grand tourer redefined with neural network suspension</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="font-bold text-electric">€3,800,000</span>
+                                        <span class="text-gray-400 text-sm">0/25 REMAINING</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back bg-gradient-to-br from-electric/10 to-nebula/10 text-white rounded-xl p-6 shadow-lg h-full flex flex-col justify-center border border-electric/30">
+                            <h3 class="text-xl font-bold mb-4 font-orbitron">TECH SPECS</h3>
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex justify-between">
+                                    <span>Powertrain:</span>
+                                    <span class="text-electric">TTV8 Hybrid (1,450HP)</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>0-300km/h:</span>
+                                    <span class="text-electric">9.8s</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Top Speed:</span>
+                                    <span class="text-electric">420km/h</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Weight:</span>
+                                    <span class="text-electric">1,650kg</span>
+                                </li>
+                            </ul>
+                            <button class="mt-6 bg-gray-600 text-gray-300 font-bold py-2 px-4 rounded-full transition font-orbitron text-sm cursor-not-allowed" disabled>
+                                SOLD OUT
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model 3 -->
+                <div class="flip-card cursor-pointer h-full">
+                    <div class="flip-card-inner h-full">
+                        <div class="flip-card-front h-full">
+                            <div class="holographic rounded-xl overflow-hidden h-full flex flex-col">
+                                <div class="relative">
+                                    <img src="https://i.pinimg.com/474x/54/6b/60/546b605f74122475853984a5f096ab29.jpg" alt="Phantom R" class="w-full h-64 object-cover">
+                                    <div class="absolute top-4 right-4 bg-electric/20 backdrop-blur-sm text-electric px-3 py-1 rounded-full text-sm font-bold font-orbitron">
+                                        LAST 5 UNITS
+                                    </div>
+                                </div>
+                                <div class="p-6 flex-grow">
+                                    <h3 class="text-2xl font-bold mb-2 font-orbitron">PHANTOM R</h3>
+                                    <p class="text-gray-300 mb-4">The stealth hypercar with active camouflage and silent electric mode</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="font-bold text-electric">€5,500,000</span>
+                                        <span class="text-gray-400 text-sm">5/25 REMAINING</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back bg-gradient-to-br from-electric/10 to-nebula/10 text-white rounded-xl p-6 shadow-lg h-full flex flex-col justify-center border border-electric/30">
+                            <h3 class="text-xl font-bold mb-4 font-orbitron">TECH SPECS</h3>
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex justify-between">
+                                    <span>Powertrain:</span>
+                                    <span class="text-electric">Quad Motor EV (2,200HP)</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>0-300km/h:</span>
+                                    <span class="text-electric">7.9s</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Top Speed:</span>
+                                    <span class="text-electric">480km/h</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Weight:</span>
+                                    <span class="text-electric">1,890kg</span>
+                                </li>
+                            </ul>
+                            <button onclick="configureCar('Phantom R')" class="mt-6 bg-electric hover:bg-electric/80 text-carbon font-bold py-2 px-4 rounded-full transition font-orbitron text-sm">
+                                CONFIGURE <i class="fas fa-cog ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Configurator -->
+    <section id="configurator" class="py-20 bg-gradient-to-b from-carbon/90 to-carbon">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto holographic rounded-xl overflow-hidden border border-electric/30">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-[url('https://images.unsplash.com/photo-1624702045533-84a5f1f4e8b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center min-h-96">
+                        <div class="h-full w-full bg-gradient-to-r from-carbon/90 to-transparent flex items-center">
+                            <div class="p-8">
+                                <h2 class="text-3xl font-bold mb-4 font-orbitron">AI CONFIGURATOR</h2>
+                                <p class="text-gray-300 mb-6">Design your perfect 2025 supercar with our neural network-assisted configurator</p>
+                                <div class="flex items-center text-electric">
+                                    <i class="fas fa-robot text-2xl mr-3"></i>
+                                    <span class="font-orbitron">PERSONALIZATION ENGINE v4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <form id="car-configurator" class="space-y-6">
+                            <div>
+                                <label class="block text-gray-300 mb-2 font-orbitron">MODEL SELECTION</label>
+                                <select id="car-model" class="w-full bg-carbon border border-electric/30 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-electric">
+                                    <option value="Nebula XSR">Nebula XSR</option>
+                                    <option value="Quantum GT" disabled>Quantum GT (Sold Out)</option>
+                                    <option value="Phantom R">Phantom R</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-300 mb-2 font-orbitron">PAINT FINISH</label>
+                                <div class="grid grid-cols-5 gap-2">
+                                    <button type="button" onclick="selectColor('carbon')" class="h-8 rounded border-2 border-electric color-swatch" data-color="carbon" style="background-color: #1a1a1a"></button>
+                                    <button type="button" onclick="selectColor('white')" class="h-8 rounded border border-gray-600 color-swatch" data-color="white" style="background-color: #ffffff"></button>
+                                    <button type="button" onclick="selectColor('electric')" class="h-8 rounded border border-gray-600 color-swatch" data-color="electric" style="background-color: #00f0ff"></button>
+                                    <button type="button" onclick="selectColor('nebula')" class="h-8 rounded border border-gray-600 color-swatch" data-color="nebula" style="background-color: #6e00ff"></button>
+                                    <button type="button" onclick="selectColor('volcanic')" class="h-8 rounded border border-gray-600 color-swatch" data-color="volcanic" style="background-color: #ff0033"></button>
+                                </div>
+                                <input type="hidden" id="selected-color" value="carbon">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-300 mb-2 font-orbitron">INTERIOR PACKAGE</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="interior" value="Carbon Fiber Racing" class="text-electric focus:ring-electric" checked>
+                                        <span class="ml-2">Carbon Fiber Racing (€85,000)</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="interior" value="Titanium Luxury" class="text-electric focus:ring-electric">
+                                        <span class="ml-2">Titanium Luxury (€120,000)</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="interior" value="Sustainable Vegan" class="text-electric focus:ring-electric">
+                                        <span class="ml-2">Sustainable Vegan (€65,000)</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-300 mb-2 font-orbitron">PERFORMANCE UPGRADES</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center justify-between">
+                                        <div class="flex items-center">
+                                            <input type="checkbox" id="track-package" class="text-electric focus:ring-electric">
+                                            <span class="ml-2">Track Package</span>
+                                        </div>
+                                        <span class="text-electric">+€250,000</span>
+                                    </label>
+                                    <label class="flex items-center justify-between">
+                                        <div class="flex items-center">
+                                            <input type="checkbox" id="ai-copilot" class="text-electric focus:ring-electric">
+                                            <span class="ml-2">AI Co-Pilot System</span>
+                                        </div>
+                                        <span class="text-electric">+€180,000</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <button type="button" onclick="submitConfiguration()" class="w-full bg-electric hover:bg-electric/80 text-carbon font-bold py-3 px-4 rounded-lg transition font-orbitron">
+                                BUILD YOUR 2025 SUPERCAR
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Configurator Modal -->
+    <div id="configurator-modal" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center hidden">
+        <div class="holographic rounded-xl border border-electric/30 max-w-2xl w-full mx-4 overflow-hidden">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold font-orbitron">YOUR 2025 CONFIGURATION</h3>
+                    <button onclick="closeConfiguratorModal()" class="text-electric hover:text-white">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <div id="configuration-details" class="space-y-4 mb-6">
+                    <!-- Filled by JavaScript -->
+                </div>
+                
+                <div class="flex justify-between items-center border-t border-electric/20 pt-4">
+                    <div>
+                        <p class="text-gray-400">TOTAL PRICE</p>
+                        <p id="total-price" class="text-2xl font-bold text-electric font-orbitron">€0</p>
+                    </div>
+                    <button onclick="proceedToCheckout()" class="bg-electric hover:bg-electric/80 text-carbon font-bold py-2 px-6 rounded-full transition font-orbitron">
+                        PROCEED TO CHECKOUT
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exclusive Ownership Experience -->
+    <section id="experience" class="py-20 bg-carbon/90">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-electric font-orbitron tracking-widest">ELITE OWNERSHIP</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 font-orbitron">2025 EXCLUSIVE BENEFITS</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Beyond the vehicle - a complete lifestyle experience</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="holographic rounded-xl p-8 border border-electric/30">
+                    <div class="text-electric text-4xl mb-5">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 font-orbitron">GLOBAL CONCIERGE</h3>
+                    <p class="text-gray-300">24/7 personal assistant for travel, dining, and exclusive event access worldwide</p>
+                </div>
+                
+                <div class="holographic rounded-xl p-8 border border-electric/30">
+                    <div class="text-electric text-4xl mb-5">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 font-orbitron">AI PERSONAL TRAINER</h3>
+                    <p class="text-gray-300">Customized track training with our professional driver AI system</p>
+                </div>
+                
+                <div class="holographic rounded-xl p-8 border border-electric/30">
+                    <div class="text-electric text-4xl mb-5">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 font-orbitron">DIGITAL KEY</h3>
+                    <p class="text-gray-300">Blockchain-secured vehicle access and ownership verification</p>
+                </div>
+                
+                <div class="holographic rounded-xl p-8 border border-electric/30">
+                    <div class="text-electric text-4xl mb-5">
+                        <i class="fas fa-calendar-star"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 font-orbitron">PRIVATE LAUNCH EVENTS</h3>
+                    <p class="text-gray-300">VIP access to all future vehicle reveals and technology showcases</p>
+                </div>
+                
+                <div class="holographic rounded-xl p-8 border border-electric/30">
+                    <div class="text-electric text-4xl mb-5">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 font-orbitron">UPGRADE PROGRAM</h3>
+                    <p class="text-gray-300">Annual performance and technology upgrade options</p>
+                </div>
+                
+                <div class="holographic rounded-xl p-8 border border-electric/30">
+                    <div class="text-electric text-4xl mb-5">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 font-orbitron">CYBERSECURITY</h3>
+                    <p class="text-gray-300">Military-grade vehicle cybersecurity protection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Futuristic Newsletter -->
+    <section class="py-16 bg-gradient-to-r from-electric/10 to-nebula/10 border-y border-electric/20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto holographic rounded-xl p-12 text-center border border-electric/30">
+                <h2 class="text-3xl font-bold mb-4 font-orbitron">JOIN THE 2025 REVOLUTION</h2>
+                <p class="text-gray-300 mb-8 max-w-2xl mx-auto">Subscribe for exclusive updates on limited edition releases and private viewing invitations</p>
+                
+                <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                    <input type="email" id="newsletter-email" placeholder="Your email" required class="flex-grow bg-carbon border border-electric/30 text-white px-5 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-electric">
+                    <button type="submit" class="bg-electric hover:bg-electric/80 text-carbon font-bold px-6 py-3 rounded-lg whitespace-nowrap transition font-orbitron">
+                        SUBSCRIBE
+                    </button>
+                </form>
+                
+                <p class="mt-4 text-gray-400 text-sm">We respect your privacy. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center hidden">
+        <div class="holographic rounded-xl border border-electric/30 max-w-md w-full mx-4 overflow-hidden">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold font-orbitron">CONTACT ELITE</h3>
+                    <button onclick="closeContactModal()" class="text-electric hover:text-white">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label class="block text-gray-300 mb-2">Name</label>
+                        <input type="text" required class="w-full bg-carbon border border-electric/30 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-electric">
+                    </div>
+                    <div>
+                        <label class="block text-gray-300 mb-2">Email</label>
+                        <input type="email" required class="w-full bg-carbon border border-electric/30 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-electric">
+                    </div>
+                    <div>
+                        <label class="block text-gray-300 mb-2">Message</label>
+                        <textarea rows="4" required class="w-full bg-carbon border border-electric/30 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-electric"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-electric hover:bg-electric/80 text-carbon font-bold py-3 px-4 rounded-lg transition font-orbitron">
+                        SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Notification -->
+    <div id="success-notification" class="fixed bottom-8 right-8 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg z-50 flex items-center transform translate-x-full transition-transform">
+        <i class="fas fa-check-circle mr-3"></i>
+        <span id="success-message">Success!</span>
+    </div>
+
+    <!-- Holographic Footer -->
+    <footer class="bg-carbon/95 border-t border-electric/20 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-10">
+                <div class="md:col-span-2">
+                    <a href="#showroom" class="text-2xl font-bold flex items-center mb-4 font-orbitron">
+                        <span class="text-electric">ELITE</span><span class="text-white">2025</span>
+                    </a>
+                    <p class="text-gray-400 mb-6">Redefining automotive excellence with cutting-edge 2025 technology</p>
+                    <div class="flex space-x-5">
+                        <a href="#" class="text-gray-400 hover:text-electric text-xl transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-electric text-xl transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-electric text-xl transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-electric text-xl transition">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-lg font-orbitron">MODELS</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#technology" class="text-gray-400 hover:text-electric transition">Nebula XSR</a></li>
+                        <li><a href="#technology" class="text-gray-400 hover:text-electric transition">Quantum GT</a></li>
+                        <li><a href="#technology" class="text-gray-400 hover:text-electric transition">Phantom R</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-electric transition">Future Concepts</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-lg font-orbitron">TECHNOLOGY</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#technology" class="text-gray-400 hover:text-electric transition">Hybrid Powertrain</a></li>
+                        <li><a href="#technology" class="text-gray-400 hover:text-electric transition">AI Systems</a></li>
+                        <li><a href="#technology" class="text-gray-400 hover:text-electric transition">Active Aerodynamics</a></li>
+                        <li><a href="#technology" class="text-gray-400 hover:text-electric transition">Sustainable Materials</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-lg font-orbitron">COMPANY</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-electric transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-electric transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-electric transition">Press</a></li>
+                        <li><a href="#" onclick="openContactModal()" class="text-gray-400 hover:text-electric transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-electric/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Elite Supercars. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-electric text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-electric text-sm transition">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-electric text-sm transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-electric text-carbon p-4 rounded-full shadow-lg opacity-0 invisible transition-all hover:bg-electric/80">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.querySelector('i').classList.toggle('fa-bars');
+            mobileMenuButton.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // FAQ toggle
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                        mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+
+        // Video modal controls
+        function playVideo() {
+            document.getElementById('video-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideo() {
+            document.getElementById('video-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            // Pause video
+            const iframe = document.getElementById('video-iframe');
+            iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        }
+
+        // Contact modal controls
+        function openContactModal() {
+            document.getElementById('contact-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeContactModal() {
+            document.getElementById('contact-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showSuccess('Your message has been sent!');
+            closeContactModal();
+            this.reset();
+        });
+
+        // Newsletter form submission
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            showSuccess(`Thank you for subscribing with ${email}!`);
+            this.reset();
+        });
+
+        // Car configurator functions
+        function selectColor(color) {
+            document.getElementById('selected-color').value = color;
+            // Update active state
+            document.querySelectorAll('.color-swatch').forEach(swatch => {
+                if (swatch.dataset.color === color) {
+                    swatch.classList.add('border-2', 'border-electric');
+                    swatch.classList.remove('border');
+                } else {
+                    swatch.classList.remove('border-2', 'border-electric');
+                    swatch.classList.add('border');
+                }
+            });
+        }
+
+        function configureCar(model) {
+            document.getElementById('car-model').value = model;
+            document.getElementById('configurator').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function submitConfiguration() {
+            const form = document.getElementById('car-configurator');
+            const model = form.querySelector('#car-model').value;
+            const color = form.querySelector('#selected-color').value;
+            const interior = form.querySelector('input[name="interior"]:checked').value;
+            const trackPackage = form.querySelector('#track-package').checked;
+            const aiCopilot = form.querySelector('#ai-copilot').checked;
+            
+            // Calculate price
+            let price = 0;
+            if (model === 'Nebula XSR') price = 4200000;
+            if (model === 'Phantom R') price = 5500000;
+            
+            if (interior === 'Titanium Luxury') price += 120000;
+            else if (interior === 'Carbon Fiber Racing') price += 85000;
+            else if (interior === 'Sustainable Vegan') price += 65000;
+            
+            if (trackPackage) price += 250000;
+            if (aiCopilot) price += 180000;
+            
+            // Display configuration
+            const detailsDiv = document.getElementById('configuration-details');
+            detailsDiv.innerHTML = `
+                <div class="flex justify-between">
+                    <span>Model:</span>
+                    <span class="text-electric">${model}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Color:</span>
+                    <span class="text-electric">${color.charAt(0).toUpperCase() + color.slice(1)}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Interior:</span>
+                    <span class="text-electric">${interior}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Track Package:</span>
+                    <span class="text-electric">${trackPackage ? 'Yes (+€250,000)' : 'No'}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>AI Co-Pilot:</span>
+                    <span class="text-electric">${aiCopilot ? 'Yes (+€180,000)' : 'No'}</span>
+                </div>
+            `;
+            
+            document.getElementById('total-price').textContent = `€${price.toLocaleString()}`;
+            document.getElementById('configurator-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeConfiguratorModal() {
+            document.getElementById('configurator-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function proceedToCheckout() {
+            closeConfiguratorModal();
+            showSuccess('Your configuration has been saved! Our team will contact you shortly.');
+        }
+
+        // Success notification
+        function showSuccess(message) {
+            const notification = document.getElementById('success-notification');
+            const messageElement = document.getElementById('success-message');
+            
+            messageElement.textContent = message;
+            notification.classList.remove('translate-x-full');
+            notification.classList.add('translate-x-0');
+            
+            setTimeout(() => {
+                notification.classList.remove('translate-x-0');
+                notification.classList.add('translate-x-full');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
